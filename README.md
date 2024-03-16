@@ -1,0 +1,2 @@
+# WPRG
+Warsztaty Programowania
