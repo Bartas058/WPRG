@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+<h2>Calculator</h2>
+<form action="index.php" method="post">
+    <label>
+        <input type="text" name="num1" placeholder="Enter the 1st number" required>
+    </label>
+    <label>
+        <select name="operator" required>
+            <option value="" disabled selected>Select an operator</option>
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+    </label>
+    <label>
+        <input type="text" name="num2" placeholder="Enter the 2nd number" required>
+    </label>
+    <button type="submit">Calculate</button>
+</form>
+</body>
+</html>

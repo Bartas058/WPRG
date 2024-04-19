@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Form</title>
+    <script src="script.js"></script>
+</head>
+<body>
+<h2>Hotel Reservation Form</h2>
+<form action="index.php" method="post">
+    <label for="number_of_people">Number of people (1-4):</label>
+    <select name="number_of_people" id="number_of_people" onchange="generateFields()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br><br>
+    <div id="form_of_people"></div>
+    <br>
+    <fieldset>
+        <legend>Details of the person making the booking:</legend>
+
+        <label for="first_name">First name:</label>
+        <input type="text" id="first_name" name="first_name" pattern="[A-Za-z]+" required><br><br>
+
+        <label for="last_name">Last name:</label>
+        <input type="text" id="last_name" name="last_name" pattern="[A-Za-z]+" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="credit_card">Credit card details:</label>
+        <input type="text" id="credit_card" name="credit_card" pattern="[0-9]+" required><br><br>
+
+        <label for="arrival_date">Arrival date:</label>
+        <input type="date" id="arrival_date" name="arrival_date" required><br><br>
+
+        <label for="arrival_time">Arrival time:</label>
+        <input type="time" id="arrival_time" name="arrival_time" required><br><br>
+    </fieldset>
+    <br>
+    <label for="extra_bed">Is there a need to provide a bed for a child?</label>
+    <input type="checkbox" id="extra_bed" name="extra_bed"><br><br>
+    <fieldset>
+        <legend>Select amenities:</legend>
+        <input type="checkbox" id="air_conditioning" name="amenities[]" value="air_conditioning">
+        <label for="air_conditioning">Air Conditioning</label><br>
+
+        <input type="checkbox" id="ashtray" name="amenities[]" value="ashtray">
+        <label for="ashtray">Ashtray</label><br><br>
+    </fieldset>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
